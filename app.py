@@ -18,7 +18,6 @@ total_sales_product['Sales']=round(total_sales_product['Sales'],2)
 total_sales_product=formatIndex(total_sales_product)
 
 st.dataframe(total_sales_product.head(10))
-st.dataframe(total_sales_product.tail(10))
 
-# fig=px.bar(total_sales_product,x= 'Product Name',y='Sales',orientation='h',color='Product Name')
-# st.plotly_chart(fig,use_container_width=True)
+fig=px.bar(total_sales_product,x= 'Product Name',y='Sales',orientation='h',color='Product Name')
+st.plotly_chart(fig,use_container_width=True)
